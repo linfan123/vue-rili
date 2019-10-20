@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>日历</title>
+		<script>
+			window.TS_WEB = { 
+		    "api": "\/api\/v2",
+		    "apiv1": "\/api\/v1",
+		    "socketUrl": "120.0.0.1:9900",
+		    "im_token": "",
+		    "webSocket": null,
+		    "loaded": false,
+		    "isWeiXin": false,
+		    "currentUserId": 0,
+		    "dataBase": null,
+		    "goldName": "\u4f5b\u5e01"
+		  }
+			// 判断微信浏览器
+			function isWeiXin() {
+			  var ua = window.navigator.userAgent.toLowerCase();
+			  if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+			    return true;
+			  } else {
+			    return false;
+			  }
+			}
+			if (isWeiXin()) {
+			  TS_WEB.isWeiXin = true;
+			}
+		</script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  
+</html>
